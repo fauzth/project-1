@@ -3,56 +3,56 @@
         "title": "Introduction to Python Programming",
         "tags": ["Python", "Programming", "Beginner"],
         "date": "2023-01-15",
-        "img": "../public/assets/py.png",
+        "img": "/assets/py.png",
         "alt": "Python programming logo"
     },
     {
         "title": "Understanding JavaScript Closures",
         "tags": ["JavaScript", "Web Development", "Intermediate"],
         "date": "2023-02-20",
-        "img": "../public/assets/js.jpg",
+        "img": "/assets/js.jpg",
         "alt": "JavaScript closures concept"
     },
     {
         "title": "Getting Started with React",
         "tags": ["React", "JavaScript", "Frontend"],
         "date": "2023-03-10",
-        "img": "../public/assets/react.png",
+        "img": "/assets/react.png",
         "alt": "React framework logo"
     },
     {
         "title": "Building REST APIs with Node.js",
         "tags": ["Node.js", "Backend", "API"],
         "date": "2023-04-05",
-        "img": "../public/assets/restAPI.png",
+        "img": "/assets/restAPI.png",
         "alt": "Node.js REST API development"
     },
     {
         "title": "Exploring Machine Learning with Python",
         "tags": ["Machine Learning", "Python", "Data Science"],
         "date": "2023-05-22",
-        "img": "../public/assets/ML.jpg",
+        "img": "/assets/ML.jpg",
         "alt": "Machine learning with Python"
     },
     {
         "title": "A Guide to Version Control with Git",
         "tags": ["Git", "Version Control", "Development"],
         "date": "2023-06-18",
-        "img": "../public/assets/git.png",
+        "img": "/assets/git.png",
         "alt": "Git version control logo"
     },
     {
         "title": "Understanding Asynchronous JavaScript",
         "tags": ["JavaScript", "Async", "Web Development"],
         "date": "2023-07-30",
-        "img": "../public/assets/jsAsync.png",
+        "img": "/assets/jsAsync.png",
         "alt": "Asynchronous JavaScript overview"
     },
     {
         "title": "Exploring the Basics of Docker",
         "tags": ["Docker", "DevOps", "Containerization"],
         "date": "2023-09-25",
-        "img": "../public/assets/docker.avif",
+        "img": "/assets/docker.avif",
         "alt": "Docker logo and containerization"
     }
 ]
