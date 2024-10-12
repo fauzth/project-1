@@ -1,12 +1,14 @@
 import { useState } from "react";
 import postData from "../posts.json";
 
-function Navbar({ filter }) {
+function Navbar({ filter, onSearch }) {
   const [posts] = useState(postData);
+  const [search, setSearch] = useState("")
 
   const handleSearch = (e) => {
     const searchTerm = e.target.value.toLowerCase();
-
+    setSearch(searchTerm)
+    
     // Filter posts based on matching tags
     const searchResults = posts.filter((item) =>
       item.tags.some(tag => tag.toLowerCase().includes(searchTerm))
@@ -14,6 +16,9 @@ function Navbar({ filter }) {
 
     // Kirim hasil pencarian ke parent (App)
     filter(searchResults);
+    onSearch(searchTerm);
+    // console.log(searchTerm)
+    // setTotalPost(filteredPosts.length)
   };
 
   return (
