@@ -1,5 +1,4 @@
 import HeroList from "./heroList";
-import Pagination from "./pagintaion";
 
 function Hero({ post, onSearch }) {
   return (
@@ -9,7 +8,8 @@ function Hero({ post, onSearch }) {
       </h1>
       {onSearch.length > 0 && (
         <p className="text-sm text-gray-500 text-center">
-          Ditemukan {post.length} artikel dengan kata kunci <span className="font-bold">{onSearch}</span>  
+          Ditemukan {post.length} artikel dengan kata kunci{" "}
+          <span className="font-bold">{onSearch}</span>
         </p>
       )}
 
@@ -20,7 +20,6 @@ function Hero({ post, onSearch }) {
               <HeroList key={item.id} post={item} /> // Menampilkan hasil filter
             ))}
         </div>
-        <Pagination/>
       </div>
     </>
   );
