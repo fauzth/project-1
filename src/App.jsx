@@ -2,6 +2,7 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import { useState, useEffect } from "react";
 import postData from "./posts.json"; // Import data post
+import { GlobalContext } from "./context";
 
 function App() {
   // Mengatur state dengan data post awal
@@ -18,15 +19,21 @@ function App() {
     setSearchLength(search);
   };
 
+  const user = {
+    username: "Fadli fauzi",
+  };
+
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
       .then((json) => setExternalPosts(json));
-  });
+  }, []);
   return (
     <>
       <Navbar filter={handleSearch} onSearch={onSearch} />
-      <Hero post={filteredPosts} onSearch={searchLength} />
+      <GlobalContext.Provider value={user}>
+        <Hero post={filteredPosts} onSearch={searchLength} />
+      </GlobalContext.Provider>
       <hr />
 
       <h2 className="text-center p-2 font-bold text-2xl ">External Posts</h2>

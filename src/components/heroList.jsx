@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { GlobalContext } from "../context";
+
 function HeroList({ post }) {
+  const user = useContext(GlobalContext);
   return (
     <>
       <div className="card w-72 h-auto shadow-lg rounded-none">
@@ -16,6 +20,9 @@ function HeroList({ post }) {
             <a href="#" className="text-blue-800 underline hover:text-blue-400">
               Read More &raquo;
             </a>
+          </div>
+          <div className="text-center">
+            <small>Ditulis oleh {user.username}</small>
           </div>
         </div>
       </div>
