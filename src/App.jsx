@@ -8,7 +8,6 @@ function App() {
   // Mengatur state dengan data post awal
   const [filteredPosts, setFilteredPosts] = useState(postData);
   const [searchLength, setSearchLength] = useState(0);
-  const [externalPosts, setExternalPosts] = useState([]);
 
   const handleSearch = (searchResults) => {
     setFilteredPosts(searchResults); // Simpan hasil pencarian
@@ -23,11 +22,6 @@ function App() {
     username: "Fadli fauzi",
   };
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((json) => setExternalPosts(json));
-  }, []);
   return (
     <>
       <Navbar filter={handleSearch} onSearch={onSearch} />
@@ -36,11 +30,10 @@ function App() {
       </GlobalContext.Provider>
       <hr />
 
-      <h2 className="text-center p-2 font-bold text-2xl ">External Posts</h2>
       <div className="text-center">
-        {externalPosts.map((item, index) => (
-          <p key={index}> - {item.title}</p>
-        ))}
+        <a href={"/externalpost"} className="p-2 font-bold text-2xl ">
+          External Posts
+        </a>
       </div>
     </>
   );

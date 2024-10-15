@@ -17,7 +17,7 @@ function HeroList({ post }) {
           <h2 className="card-title">{post.title}</h2>
           <small className="italic">{post.tags.join(", ")}</small>
           <div className="card-actions justify-end">
-            <a href="#" className="text-blue-800 underline hover:text-blue-400">
+            <a href={"/detail"} className="text-blue-800 underline hover:text-blue-400">
               Read More &raquo;
             </a>
           </div>
